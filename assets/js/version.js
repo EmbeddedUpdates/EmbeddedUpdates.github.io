@@ -5,7 +5,7 @@
 */
 
 $(document).ready(function() {
-	fetch('http://www.embeddedupdates.com/version.html')
+	fetch('https://www.embeddedupdates.github.io/version.html')
 		.then(response => response.text())
 		.then(text => {
 			// Do something with the text
