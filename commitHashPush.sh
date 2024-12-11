@@ -19,3 +19,4 @@ git commit -m "$1"
 git push origin main
 
 echo "Changes committed and pushed to the main branch."
+echo "Current commit hash is: " | cat version.txt
