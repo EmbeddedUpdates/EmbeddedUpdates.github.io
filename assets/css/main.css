@@ -3283,6 +3283,10 @@ input, select, textarea {
 				height: 100vh;
 			}
 
+			body.is-ie .wrapper.tophalf {
+				height: 50vh;
+			}
+
 			@media screen and (max-width: 1280px) {
 
 				.wrapper.fullscreen {

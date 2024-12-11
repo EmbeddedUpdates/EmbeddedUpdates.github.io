@@ -9,7 +9,7 @@ $(document).ready(function() {
 		.then(response => response.text())
 		.then(text => {
 			// Do something with the text
-			console.log(text);
+			console.log("version hash: " + text);
 			$( "#versionNumber" ).text(text);
 		})
 	.catch(error => console.error('Error:', error));
