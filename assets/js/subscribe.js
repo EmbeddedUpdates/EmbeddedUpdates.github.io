@@ -7,6 +7,21 @@
 $(document).ready(function() {
 	$("#subscribeButton").click(function() {
 		// Code to execute when the button is clicked
+
+		fetch("https://formspree.io/f/xpwzejdz", {
+			method: "POST",
+			body: JSON.stringify({
+				email: $("#newSubscriberEmail").attr('value'),
+				message: "Fix my bugs",
+			}),
+			headers: {
+				"Content-type": "application/json; charset=UTF-8"
+			}
+		});
+
+		  .then((response) => response.json())
+		  .then((json) => console.log(json));
+
 		console.log("Button clicked!");
 		$("#subscribeButton").attr('value', 'Done!');
 	});
