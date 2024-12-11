@@ -7,7 +7,10 @@ if [ -z "$1" ]; then
 fi
 
 rm version.txt
-git rev-parse HEAD > version.txt
+
+echo "<link href="assets/css/txtstyle.css" rel="stylesheet" type="text/css" />" > version.html
+commitHash=$(git rev-parse HEAD)
+echo $commitHash > version.html
 
 # Add all changes
 git add .
@@ -19,6 +22,4 @@ git commit -m "$1"
 git push origin main
 
 echo "Changes committed and pushed to the main branch."
-commitHash=$(cat version.txt)
-
 echo "Current commit hash is: ${commitHash}"
